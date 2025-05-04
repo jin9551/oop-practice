@@ -13,13 +13,13 @@ public class User {
 
     public void initPassword(PasswordGenerator passwordGenerator){
         // as-is
-        //RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator();
+        // RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator();
 
         // to-be
-        String randaomPassword = passwordGenerator.generatePassword();
+        String password = passwordGenerator.generatePassword();
 
-        if(randaomPassword.length() >= 8 && randaomPassword.length() <=12 ){
-            this.password = randaomPassword;
+        if(password.length() >= 8 && password.length() <=12 ){
+            this.password = password;
         }
     }
 }

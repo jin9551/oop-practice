@@ -1,5 +1,6 @@
 package org.example.part1;
 
+import org.example.RandomPasswordGenerator;
 import org.example.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,8 +13,11 @@ class UserTest {
     @Test
     void passwordTest() {
         User user = new User();
-        // 이렇게 구현해도 되지만 user.initPassword(new CorrectFixedPasswordGenerator());
+        // 이렇게 구현해도 되지만
+        //user.initPassword(new CorrectFixedPasswordGenerator());
+        //user.initPassword(new RandomPasswordGenerator());
         user.initPassword(()->"abcdefgh"); // 람다식으로 구현해도 됨
+        //user.initPassword();
         assertThat(user.getPassword()).isNotNull();
     }
 
